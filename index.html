@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cybersecurity News Hub</title>
+<style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        
+        .site-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .news-ticker {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+        
+        .ticker-content {
+            display: inline-block;
+            animation: ticker 30s linear infinite;
+            padding-right: 50px;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 7fr 3fr;
+            gap: 20px;
+        }
+        
+        .featured-news {
+            margin-bottom: 30px;
+        }
+        
+        .featured-news h2, .category-news h2, .sidebar h2 {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .news-item {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .news-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .news-item h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .news-item p {
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        
+        .news-item .source {
+            font-size: 0.8rem;
+            color: #95a5a6;
+            text-align: right;
+        }
+        
+        .news-item a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .sidebar {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        
+        .sidebar-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .sidebar-item:last-child {
+            border-bottom: none;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: none;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+    </style>
+<link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header>
+<div class="container">
+<h1 class="site-title">Cybersecurity News Hub</h1>
+</div>
+<div class="news-ticker">
+<div class="ticker-content" id="ticker-content">
+<span class="loading">Loading breaking news...</span>
+</div>
+</div>
+</header>
+<div class="container">
+<div class="error-message" id="error-message"></div>
+<section class="featured-news" id="featured-stories">
+<h2>Featured Stories</h2>
+<div class="news-grid" id="featured-news">
+<div class="loading">Loading featured stories...</div>
+</div>
+</section>
+<div class="main-content" id="main-content">
+<main>
+<section class="category-news" id="latest-threats">
+<h2>Latest Threats</h2>
+<div id="threats-news">
+<div class="loading">Loading threat news...</div>
+</div>
+</section>
+<section class="category-news" id="data-breaches">
+<h2>Data Breaches</h2>
+<div id="breaches-news">
+<div class="loading">Loading breach news...</div>
+</div>
+</section>
+<section class="category-news" id="security-research">
+<h2>Security Research</h2>
+<div id="research-news">
+<div class="loading">Loading research news...</div>
+</div>
+</section>
+</main>
+<aside class="sidebar">
+<h2>Trending Topics</h2>
+<div id="sidebar-news">
+<div class="loading">Loading trending topics...</div>
+</div>
+</aside>
+</div>
+</div>
+<footer>
+<div class="container">
+<p>© 2025 Cybersecurity News Hub. All news content belongs to their respective owners.</p>
+</div>
+</footer>
+<!-- Script will be added here -->
+<script src="js/script.js"></script>
+</body>
+</html>
